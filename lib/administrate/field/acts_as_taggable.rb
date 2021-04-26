@@ -21,7 +21,7 @@ module Administrate
         "#{context}_list"
       end
 
-      def self.permitted_attribute(attr)
+      def self.permitted_attribute(attr, resource_class: self.class.model)
         context = super.to_s.singularize
         "#{context}_list"
       end
